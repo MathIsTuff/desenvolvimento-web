@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Atividade 02</title>
+</head>
+
+<body>
+    <header>
+        <h1>Meu Blog de Viagens</h1>
+        <nav>
+            <ul>
+                <li><a href="#nordeste">Home</a></li>
+                <li><a href="#Sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <article>
+                <div class="container">
+                    <h2 id="nordeste">Descobrindo as praias do nordeste</h2>
+                <p>
+                    Publicado em
+                    <time datetime="2026-02-15">15 de fevereiro de 2026</time>
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque
+                    sem
+                    placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
+                    Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia
+                    integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per
+                    conubia nostra inceptos himenaeos.</p>
+                <figure>
+                    <img src="https://www.viagenscinematograficas.com.br/wp-content/uploads/2020/05/10-Melhores-Praias-do-Nordeste-Brasileiro-Capa-768x432.jpg"
+                        alt="Uma praia em ipojuca">
+                    <figcaption>Praia de Porto de Galinhas, Ipojuca - PE</figcaption>
+                </figure>
+                <p>Aliquam erat volutpat. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Donec
+                    ullamcorper
+                    nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.
+                    Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur.</p>
+                </div>
+            </article>
+            <section>
+                <form action="/submit">
+                    <fieldset>
+                        <legend>Torne-se um colaborador</legend>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <br><br>
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Gênero</legend>
+                        <label>
+                            <input type="radio" name="genero" value="masculino" required>
+                            Masculino
+                        </label>
+
+                        <label>
+                            <input type="radio" name="genero" value="feminino">
+                            Feminino
+                        </label>
+
+
+
+                        <label>
+                            <input type="radio" name="genero" value="prefiro_nao_dizer">
+                            Prefiro não dizer
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="genero" value="outro">
+                            Outro:
+                        </label>
+                        <input type="text" name="genero_outro" placeholder="Especifique">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Fale um pouco sobre você</legend>
+                        <label for="Biografia">Biografia:</label>
+                        <textarea id="Biografia" name="Biografia" required></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <label>
+                            <input type="checkbox" id="termos" name="termos" required>
+                            Concordo com os termos de uso
+                        </label>
+                    </fieldset>
+                    <br>
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </section>
+        <aside>
+            <h3 id="Sobre">Sobre mim</h3>
+            <p>Olá! Sou um apaixonado por viagens e adoro compartilhar minhas experiências pelo mundo. Neste blog, você
+                encontrará relatos, dicas e fotos das minhas aventuras. Espero inspirar você a explorar novos destinos e
+                criar memórias inesquecíveis!</p>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2026 Meu Blog de Viagens. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
