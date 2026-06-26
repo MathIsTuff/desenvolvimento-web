@@ -18,6 +18,8 @@ import starFilled from "../assets/starFilled.svg";
 import starEmpty from "../assets/starEmpty.svg";
 import ProfileImageTwo from "../assets/images/profileTwo.png";
 import ProfileImageThree from "../assets/images/profileThree.png";
+import "../styles/pricing.css";
+import Check from "../assets/check.svg";
 
 
 export default function Home() {
@@ -223,6 +225,78 @@ export default function Home() {
                     </div>
                 </section>
             </section>
-        </>
-    )
+            <section id="pricing" className="container">
+                <header>
+                    <p className="desktop-only">Planos e preços</p>
+                    <h2>Nossos planos</h2>
+                </header>
+                <section className="even-columns gap-1.5">
+                    <div className="pricing-card">
+                        <span className="plan">
+                            <h3>Básico</h3>
+                            <p>Diagnóstico e consultoria técnica para otimizar seu equipamento.</p>
+                        </span>
+                        <h2>Grátis</h2>
+                        <Button text="Solicitar" secondary key="free" />
+                        <span className="hr" /><span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Análise de desempenho</p>
+                        </span>
+                        <span className="features">
+
+                                <img src={Check} alt="ícone check" width={24} height={20} />
+                                <p>1 consulta por cliente</p>
+
+                        </span>
+                    </div>
+                    <div className="pricing-card premium">
+                        <span className="bonus">
+                            <p>MELHOR CUSTO-BENEFÍCIO</p>
+                        </span>
+                        <span className="plan">
+                            <h3>Premium</h3>
+                            <p>Manutenção regular e suporte técnico completo para seu PC.</p>
+                        </span>
+                        <span className="price">
+                            <h2>R$ 19,90</h2>
+                            <p>/mês</p>
+                        </span>
+                        <Button text="Contratar" key="premium" />
+                        <span className="hr" />
+                        <span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Manutenção mensal</p>
+                        </span>
+                        <span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Suporte técnico ilimitado</p>
+                        </span>
+                        <span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Otimização de performance</p>
+                        </span>
+                    </div>
+                    <div className="pricing-card">
+                        <span className="plan">
+                            <h3>Empresarial</h3>
+                            <p>Soluções completas de manutenção para sua empresa.</p>
+                        </span>
+                        <span className="price">
+                            <h2>R$ 12,90</h2>
+                            <p style={{fontSize: '0.75rem'}}>por pessoa/mês</p>
+                        </span>
+                        <Button text="Falar com vendas" key="enterprise" />
+                        <span className="hr" /><span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Suporte prioritário</p>
+                        </span>
+                        <span className="features">
+                                <img src={Check} alt="ícone check" width={24} height={20} />
+                                <p>Manutenção preventiva incluída</p>
+                        </span>
+                    </div>
+                </section>
+            </section>
+            </>
+            )
 }
