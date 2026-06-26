@@ -92,8 +92,8 @@ export default function Home() {
                     <p className="desktop-only">
                         Olá
                     </p>
-                    <h1>Comida de mãe direto no seu apê, é só pedir que entregamos para você!</h1>
-                    <p>Já pensou em matar a saudade daquela comida caseira? O melhor de tudo, nossas receitas são 100% saudáveis, bora entrar no shape.
+                    <h1>Computadores personalizados e manutenção especializada para levar mais performance ao seu dia a dia.</h1>
+                    <p>Na ArciTech, você encontra eletrônicos de alto nível, soluções personalizadas para trabalho e gaming e manutenção confiável para manter seu equipamento sempre pronto.
                     </p>
                     <div className="flex gap-1">
                         <span><Button text="Cadastre-se" /></span>
