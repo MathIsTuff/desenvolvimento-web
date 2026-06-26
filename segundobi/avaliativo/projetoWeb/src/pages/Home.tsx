@@ -8,10 +8,19 @@ import "../styles/utility.css";
 import HeroRectangleOne from "../assets/images/rectangleOne.png";
 import HeroRectangleTwo from "../assets/images/rectangleTwo.png";
 import "../styles/hero.css";
+import Champion from "../assets/champion.svg";
+import "../styles/solution.css";
+import CardVantagem from "../components/cardVantagem.tsx";
 
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+    useEffect(() => {
+        const html = document.querySelector("html");
+        if (html) {
+            html.style.overflow = showMobileMenu ? "hidden" : "auto";
+        }
+    }, [showMobileMenu]);
     return (
         <>
             <header className="container py-sm">
@@ -50,22 +59,22 @@ export default function Home() {
                                 <div className="container flex">
                                     <ul>
                                         <li>
-                                            <a href="#">Home</a>
+                                            <a onClick={() => setShowMobileMenu(!showMobileMenu)} href="#">Home</a>
                                         </li>
                                         <li>
-                                            <a href="#solution">Soluções</a>
+                                            <a onClick={() => setShowMobileMenu(!showMobileMenu)} href="#solution">Soluções</a>
                                         </li>
                                         <li>
-                                            <a href="#testimonials">Depoimentos</a>
+                                            <a onClick={() => setShowMobileMenu(!showMobileMenu)} href="#testimonials">Depoimentos</a>
                                         </li>
                                         <li>
-                                            <a href="#pricing">Preços</a>
+                                            <a onClick={() => setShowMobileMenu(!showMobileMenu)} href="#pricing">Preços</a>
                                         </li>
                                         <li>
-                                            <a href="#contact">Contato</a>
+                                            <a onClick={() => setShowMobileMenu(!showMobileMenu)} href="#contact">Contato</a>
                                         </li>
                                         <li>
-                                            <a className="reverse-color" href="#">Login</a>
+                                            <a onClick={() => setShowMobileMenu(!showMobileMenu)} className="reverse-color" href="#">Login</a>
                                         </li>
                                     </ul>
                                     <span onClick={() => setShowMobileMenu(!showMobileMenu)} className="btn-wrapper">
@@ -102,6 +111,37 @@ export default function Home() {
                         </span>
                     </div>
                 </div>
+            </section>
+            <section className="container" id="solution">
+                <header>
+                    <span>
+                        <h2>Soluções</h2>
+                        <span className="desktop-only">
+                            <h2>
+                                Sob medida para você
+                            </h2>
+                        </span>
+                    </span>
+                    <p>
+                        Inovação é com a gente! A <strong>Arcitech </strong>
+                        já conquistou diversos clientes, seja você mais um deles,
+                        veja tudo que pode ganhar com nossos serviços.
+                    </p>
+                </header>
+                <section className="even-columns">
+                    <CardVantagem
+                        imagem={Champion}
+                        titulo="Produtos de alta performance"
+                        descricao="Nossos computadores e acessórios são selecionados para entregar velocidade e confiabilidade em qualquer tarefa." />
+                    <CardVantagem
+                        imagem={Champion}
+                        titulo="Personalização sob medida"
+                        descricao="Montamos PCs personalizados com os componentes certos para o seu uso, do home office ao setup gamer." />
+                    <CardVantagem
+                        imagem={Champion}
+                        titulo="Manutenção especializada"
+                        descricao="Oferecemos suporte técnico e manutenção para garantir que seu equipamento funcione sempre da melhor forma." />
+                </section>
             </section>
         </>
     )
