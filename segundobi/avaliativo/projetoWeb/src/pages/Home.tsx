@@ -20,6 +20,7 @@ import ProfileImageTwo from "../assets/images/profileTwo.png";
 import ProfileImageThree from "../assets/images/profileThree.png";
 import "../styles/pricing.css";
 import Check from "../assets/check.svg";
+import ContactForm from "../components/contactForm.tsx";
 
 
 export default function Home() {
@@ -296,6 +297,28 @@ export default function Home() {
                         </span>
                     </div>
                 </section>
+            </section>
+            <ContactForm></ContactForm>
+            <section className="container">
+                <footer>
+                    <div>
+                        <img src={Logo} alt="" />
+                        <span>
+                            <h3>Empresa</h3>
+                            <p>Sobre nós</p>
+                            <p>Faça parte do time</p>
+                            <p>blog</p>
+                        </span>
+                        <span>
+                            <h3>Outros</h3>
+                            <p>Filiais</p>
+                            <p>Marketing</p>
+                            <p>Parceiros</p>
+                        </span>
+                    </div>
+                    <p>Feito nas aulas de <strong>programação web</strong> - 2026 - Todos os direitos reservados</p>
+                </footer>
+
             </section>
             </>
             )
