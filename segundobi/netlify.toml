@@ -1,5 +1,5 @@
 [build]
-  base = "segundobi/avaliativo/projetoWeb"
+  base = "avaliativo/projetoWeb"
   command = "npm run build"
   publish = "dist"
   functions = "netlify/functions"
