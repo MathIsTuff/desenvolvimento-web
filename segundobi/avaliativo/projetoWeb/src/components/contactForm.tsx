@@ -31,32 +31,25 @@ const ContactForm = () => {
       });
 
       const responseText = await response.text();
+      let result: { message?: string; error?: string } = {};
 
-        let result: { message?: string; error?: string } = {};
-
-        try {
+      try {
         result = responseText ? JSON.parse(responseText) : {};
-        } catch {
+      } catch {
         throw new Error(
-            `O servidor retornou uma resposta inválida (${response.status}).`,
+          `O servidor retornou uma resposta inválida (${response.status}).`
         );
-        }
+      }
 
       if (!response.ok) {
         throw new Error(result.error || "Erro ao enviar a mensagem.");
       }
 
       setFeedback(result.message || "Mensagem enviada com sucesso!");
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       setFeedback(
-        error instanceof Error
-          ? error.message
-          : "Erro ao enviar a mensagem.",
+        error instanceof Error ? error.message : "Erro ao enviar a mensagem."
       );
     } finally {
       setIsSending(false);
@@ -64,73 +57,71 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="container">
-      <header className="contato">
-          <span>
-              <p>Restou alguma dúvida</p>
-              <h2>Entre em contato!</h2>
-          </span>
-          <p>
-              Entre em contato, estamos dispostos a tirar qualquer dúvida, seja sobre as formas de pagamento ou dúvidas tecnicas. Estamos a sua disposição.
-          </p>
-      </header>
-      <form onSubmit={handleSubmit}>
+    <section id="contact" className="container py-sm">
+      <header className="contact-header">
         <div>
-          <label htmlFor="name">Nome:</label>
+          <p>Restou alguma dúvida</p>
+          <h2>Entre em contato!</h2>
+        </div>
+        <p>
+          Entre em contato, estamos dispostos a tirar qualquer dúvida, seja sobre as formas de pagamento ou dúvidas técnicas. Estamos à sua disposição.
+        </p>
+      </header>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="name">Nome</label>
           <input
             id="name"
             name="name"
             type="text"
+            placeholder="Seu nome"
             value={formData.name}
             onChange={(event) =>
-              setFormData({
-                ...formData,
-                name: event.target.value,
-              })
+              setFormData({ ...formData, name: event.target.value })
             }
             required
           />
         </div>
 
-        <div>
-          <label htmlFor="email">E-mail:</label>
+        <div className="form-group">
+          <label htmlFor="email">E-mail</label>
           <input
             id="email"
             name="email"
             type="email"
+            placeholder="seu@email.com"
             value={formData.email}
             onChange={(event) =>
-              setFormData({
-                ...formData,
-                email: event.target.value,
-              })
+              setFormData({ ...formData, email: event.target.value })
             }
             required
           />
         </div>
 
-        <div>
-          <label htmlFor="message">Mensagem:</label>
+        <div className="form-group">
+          <label htmlFor="message">Mensagem</label>
           <textarea
             id="message"
             name="message"
+            placeholder="Sua mensagem aqui..."
             value={formData.message}
             onChange={(event) =>
-              setFormData({
-                ...formData,
-                message: event.target.value,
-              })
+              setFormData({ ...formData, message: event.target.value })
             }
             rows={5}
             required
           />
         </div>
 
-        <button type="submit" disabled={isSending}>
-          {isSending ? "Enviando..." : "Enviar"}
+        <button type="submit" disabled={isSending} className="submit-btn">
+          {isSending ? "Enviando..." : "Enviar Mensagem"}
         </button>
 
-        {feedback && <p role="status">{feedback}</p>}
+        {feedback && (
+          <p role="status" className={`feedback ${isSending ? "" : "show"}`}>
+            {feedback}
+          </p>
+        )}
       </form>
     </section>
   );

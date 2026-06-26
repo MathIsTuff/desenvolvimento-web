@@ -21,6 +21,8 @@ import ProfileImageThree from "../assets/images/profileThree.png";
 import "../styles/pricing.css";
 import Check from "../assets/check.svg";
 import ContactForm from "../components/contactForm.tsx";
+import "../styles/contact.css";
+import "../styles/footer.css";
 
 
 export default function Home() {
@@ -299,27 +301,24 @@ export default function Home() {
                 </section>
             </section>
             <ContactForm></ContactForm>
-            <section className="container">
-                <footer>
+            <footer className="container py-sm">
+                <div className="footer-content desktop-only">
+                    <img src={Logo} alt="Logo Arcitech" width={180} />
                     <div>
-                        <img src={Logo} alt="" />
-                        <span>
-                            <h3>Empresa</h3>
-                            <p>Sobre nós</p>
-                            <p>Faça parte do time</p>
-                            <p>blog</p>
-                        </span>
-                        <span>
-                            <h3>Outros</h3>
-                            <p>Filiais</p>
-                            <p>Marketing</p>
-                            <p>Parceiros</p>
-                        </span>
+                        <h3>Empresa</h3>
+                        <p>Sobre nós</p>
+                        <p>Faça parte do time</p>
+                        <p>Blog</p>
                     </div>
-                    <p>Feito nas aulas de <strong>programação web</strong> - 2026 - Todos os direitos reservados</p>
-                </footer>
-
-            </section>
+                    <div>
+                        <h3>Outros</h3>
+                        <p>Filiais</p>
+                        <p>Marketing</p>
+                        <p>Parceiros</p>
+                    </div>
+                </div>
+                <p className="footer-copyright">Feito nas aulas de <strong>programação web</strong> - 2026 - Todos os direitos reservados</p>
+            </footer>
             </>
             )
 }

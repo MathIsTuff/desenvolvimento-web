@@ -1,66 +1,106 @@
-form {
-  max-width: 400px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-form div {
-  margin-bottom: 1rem;
+.contact-header div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+.contact-header p {
+  color: rgb(99, 99, 99);
+  max-width: 32rem;
+  line-height: 1.6;
 }
 
-input {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.contact-form {
+  max-width: 28rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-button {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-button:hover {
-  background: #0056b3;
-}
-
-p {
-  margin-top: 1rem;
+.form-group label {
+  font-weight: 500;
+  font-size: 0.875rem;
   color: #333;
 }
 
-.contato {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.2s ease;
 }
 
-.contato span {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
-.contato p {
+.form-group textarea {
+  resize: none;
+}
+
+.submit-btn {
+  padding: 0.75rem 1.5rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.feedback {
+  padding: 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
   text-align: center;
+  animation: slideIn 0.3s ease;
 }
 
-.contato > p {
-    width: 30rem;
+.feedback.show {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
