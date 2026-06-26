@@ -11,6 +11,13 @@ import "../styles/hero.css";
 import Champion from "../assets/champion.svg";
 import "../styles/solution.css";
 import CardVantagem from "../components/cardVantagem.tsx";
+import ProfileImageOne from "../assets/images/profileOne.png";
+import "../styles/testimonials.css";
+import CardTestimonials from "../components/cardTestimonials.tsx";
+import starFilled from "../assets/starFilled.svg";
+import starEmpty from "../assets/starEmpty.svg";
+import ProfileImageTwo from "../assets/images/profileTwo.png";
+import ProfileImageThree from "../assets/images/profileThree.png";
 
 
 export default function Home() {
@@ -141,6 +148,79 @@ export default function Home() {
                         imagem={Champion}
                         titulo="Manutenção especializada"
                         descricao="Oferecemos suporte técnico e manutenção para garantir que seu equipamento funcione sempre da melhor forma." />
+                </section>
+            </section>
+            <section id="testimonials">
+                <header>
+                    <span>
+                        <p className="desktop-only">
+                            Conselho de quem conhece
+                        </p>
+                        <h2>Cada cliente importa!</h2>
+                    </span>
+                    <p>
+                        Clientes da ArciTech sabem que tecnologia de verdade precisa de confiança, performance e atendimento próximo. Veja o que nossos clientes dizem sobre os resultados que conquistamos.
+                    </p>
+                </header>
+                <section className="carousel">
+                    <div className="carousel-content">
+                        <CardTestimonials
+                            imagem={ProfileImageOne}
+                            rating={4}
+                            starFilled={starFilled}
+                            starEmpty={starEmpty}
+                            texto="Meu PC ficou muito mais rápido e confiável depois da personalização da ArciTech. O atendimento foi excelente e a manutenção resolveu problemas que eu achava irreversíveis."
+                            nome="Redondinho Gaúcho"
+                            cargo="Jogador peso pesado de futebol"
+                        />
+                        <CardTestimonials
+                            imagem={ProfileImageTwo}
+                            rating={5}
+                            starFilled={starFilled}
+                            starEmpty={starEmpty}
+                            texto="Pedi um PC gamer personalizado e a ArciTech entregou exatamente o que eu queria. O desempenho é incrível e o suporte técnico foi muito atencioso."
+                            nome="Pirata do Habib's"
+                            cargo="Hater de de grandes fumantes (Big Smoke)"
+                        />
+                        <CardTestimonials
+                            imagem={ProfileImageThree}
+                            rating={5}
+                            starFilled={starFilled}
+                            starEmpty={starEmpty}
+                            texto="A ArciTech me ajudou a montar um setup de home office que realmente atende às minhas necessidades. A manutenção preventiva que eles oferecem me dá tranquilidade para trabalhar sem interrupções."
+                            nome="Adão Areia"
+                            cargo="Jogador de golfe profissional com problemas de raiva"
+                        />
+                    </div>
+                    <div className="carousel-content">
+                        <CardTestimonials
+                            imagem={ProfileImageOne}
+                            rating={4}
+                            starFilled={starFilled}
+                            starEmpty={starEmpty}
+                            texto="Meu PC ficou muito mais rápido e confiável depois da personalização da ArciTech. O atendimento foi excelente e a manutenção resolveu problemas que eu achava irreversíveis."
+                            nome="Redondinho Gaúcho"
+                            cargo="Jogador peso pesado de futebol"
+                        />
+                        <CardTestimonials
+                            imagem={ProfileImageTwo}
+                            rating={5}
+                            starFilled={starFilled}
+                            starEmpty={starEmpty}
+                            texto="Pedi um PC gamer personalizado e a ArciTech entregou exatamente o que eu queria. O desempenho é incrível e o suporte técnico foi muito atencioso."
+                            nome="Pirata do Habib's"
+                            cargo="Hater de de grandes fumantes (Big Smoke)"
+                        />
+                        <CardTestimonials
+                            imagem={ProfileImageThree}
+                            rating={5}
+                            starFilled={starFilled}
+                            starEmpty={starEmpty}
+                            texto="A ArciTech me ajudou a montar um setup de home office que realmente atende às minhas necessidades. A manutenção preventiva que eles oferecem me dá tranquilidade para trabalhar sem interrupções."
+                            nome="Adão Areia"
+                            cargo="Jogador de golfe profissional com problemas de raiva"
+                        />
+                    </div>
                 </section>
             </section>
         </>
