@@ -78,7 +78,7 @@ const handler: Handler = async (event: HandlerEvent) => {
     await transporter.sendMail({
       from: `<${process.env.SMTP_USER}>`,
       replyTo: email,
-      to: process.env.CONTACT_EMAIL,
+      to: email,
       subject: "[ArciTech] Nova mensagem Landing Page",
       text: message,
       html: `
